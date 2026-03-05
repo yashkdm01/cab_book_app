@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .cab-btn {
+    @apply px-8 py-4 rounded-full font-bold text-lg transition-all shadow-xl hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .cab-rider {
+    @apply bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white;
+  }
+
+  .cab-driver {
+    @apply bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700 text-white;
+  }
+
+  .cab-title {
+    @apply text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-500;
+  }
+
+  .cab-bg {
+    @apply bg-gradient-to-br from-purple-950 via-indigo-950 to-black min-h-screen;
+  }
+}
+
+/* dark mode support */
+@media (prefers-color-scheme: dark) {
+  .cab-bg {
+    @apply bg-gradient-to-br from-gray-950 via-indigo-950 to-black;
+  }
+}
